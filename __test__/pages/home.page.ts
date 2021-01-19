@@ -1,3 +1,4 @@
+import { exception } from "console";
 import { relative } from "path";
 import {
   browser,
@@ -17,7 +18,7 @@ export namespace Selectors {
   export const closeModelIcon = by.css('img[alt="Close Modal Button"]');
   export const linkCart = by.css('img[alt="Link"]');
   export const linkItems = by.css("li[class='cDT--list__item']");
-  export const linkViewButton  = by.tagName ("a");
+  export const linkViewButton = by.tagName("a");
   export const popUpWindowTitle = by.css('p[class="cDT--post__title"]');
   export const isImageDisplayed = by.id("post-image");
   export const checkAddToCartButton = by.css(
@@ -29,14 +30,6 @@ export namespace Selectors {
 }
 
 export class HomePage {
-  // async clickOnShoppingCartButton(): Promise <void> {
-  //      element.all (Selectors.shoppingCart).get(1).click();
-  // //    return element (Selectors.isImageDisplayed).isDisplayed();
-  // }
-  async TP<T>(ele: ElementFinder | ElementArrayFinder) {
-    return (ele as any) as Promise<T>;
-  }
-
   async waitForTime(timeUnitsInSeconds: number): Promise<void> {
     return browser.sleep(timeUnitsInSeconds * 1000);
   }
@@ -78,10 +71,9 @@ export class HomePage {
     return element.all(Selectors.linkItems).getWebElements();
   }
 
-  async clickViewButtonInLinkedElements (webElement: WebElement): Promise<void> {
-    const viewButton = await webElement.findElement (Selectors.linkViewButton);
+  async clickViewButtonInLinkedElements(webElement: WebElement): Promise<void> {
+    const viewButton = await webElement.findElement(Selectors.linkViewButton);
     return browser.actions().mouseMove(viewButton).click().perform();
-
   }
 
   getCartContainer(): WebElement {
@@ -95,7 +87,6 @@ export class HomePage {
 
   async clickOnCheckOutButton(container: WebElement): Promise<void> {
     const footer = await container.findElement(by.tagName("footer"));
-
     const checkoutBtn = await footer.findElement(Selectors.checkOut);
     return browser.actions().mouseMove(checkoutBtn).click().perform();
   }

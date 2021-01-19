@@ -17,10 +17,9 @@ exports.config = {
             prefs: {
                 download: {
                     'prompt_for_download': false,
-                    // 'default_directory': '/__test__/downloads/',
+
                     'default_directory': downloadsPath,
-                    // 'default_directory': "C:\\ws-test\\org-gs1ca-prosync-indiumsoft-test\\__test__\\downloads",
-                    // 'default_directory': "../../__test__/downloads",
+               
                     'directory_upgrade': true,
 
                 }
@@ -28,20 +27,11 @@ exports.config = {
         }
     },
     localSeleniumStandaloneOpts: {
-        jvmArgs: ["-Dwebdriver.ie.driver=.\\node_modules\\webdriver-manager\\selenium\\IEDriverServer3.150.1.exe"] // e.g: "node_modules/protractor/node_modules/webdriver-manager/selenium/IEDriverServer_x64_X.XX.X.exe"
+        jvmArgs: ["-Dwebdriver.ie.driver=.\\node_modules\\webdriver-manager\\selenium\\IEDriverServer3.150.1.exe"] 
     },
 
     directConnect: false,
     framework: "jasmine",
-    // spec: scenario,
-   // baseUrl: env.baseUrl,
-   // env: env.env,
-    // locale: env.locale,
-    // username: env.username,
-    // password: env.password,
-    // companyName: env.companyName,
-    // companyGLN: env.companyGLN,
-    // userInfoId: env.userInfoId,
     jasmineNodeOpts: {
         defaultTimeoutInterval: 1000000,
         isVerbose: true,
@@ -50,7 +40,7 @@ exports.config = {
     noGlobals: false,
     suites: {
       linkinBioFunctionality: [
-           // "./linkinBio/tc01.spec.ts",
+            "./linkinBio/tc01.spec.ts",
             "./linkinBio/tc02.spec.ts",
       ],
     },
@@ -89,9 +79,9 @@ exports.config = {
         }));
         jasmine.getEnv().addReporter({
             specDone: (result) => {
-                if (result.status !== "failed") {
-                    return;
-                }
+                // if (result.status !== "failed") {
+                //     return;
+                // }
                 browser.getCapabilities().then((caps) => {
                     const browserName = caps.get("browserName");
                     browser.takeScreenshot().then((png) => {

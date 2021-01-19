@@ -2,7 +2,6 @@ import { browser, Config } from 'protractor';
 const dateTime = Date.now();
 export const config: Config = {
     allScriptsTimeout: 60000,
-    //  seleniumAddress: 'http://hub-cloud.browserstack.com/wd/hub',
     seleniumAddress: 'http://localhost:4444/wd/hub',
     capabilities: {
         browserName: 'chrome',
@@ -20,9 +19,6 @@ export const config: Config = {
         browser.driver.manage().window().maximize();
         browser.driver.manage().timeouts().pageLoadTimeout(60000);
         browser.waitForAngularEnabled(false);
-     //   browser.get(TestData.appURL, 30000);
-     //   browser.waitForAngularEnabled(true);
-        // browser.waitForAngular ();
         const fs = require('fs-extra');
         fs.emptyDir(`./report/${dateTime}/screenshots/`, (err: any) => {
             console.log(err);
@@ -35,9 +31,7 @@ export const config: Config = {
         }));
         jasmine.getEnv().addReporter({
             specDone: (result) => {
-                if (result.status !== 'failed') {
-                    return;
-                }
+            
                 browser.getCapabilities().then((caps) => {
                     const browserName = caps.get('browserName');
                     browser.takeScreenshot().then((png) => {

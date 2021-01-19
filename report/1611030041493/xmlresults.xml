@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites disabled="0" errors="0" failures="2" tests="6" time="95.529">
+ <testsuite name="Check the Functionality of Cart Button" timestamp="2021-01-18T23:20:54" hostname="localhost" time="21.777" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="Check the Functionality of Cart Button" name="Should Get Random Products With Cart Image" time="15.19" id="" specid="spec0" />
+  <testcase classname="Check the Functionality of Cart Button" name="Get the Title of the Cart Items" time="1.266" id="" specid="spec1" />
+ </testsuite>
+ <testsuite name="The Products must be able to Added to the Cart and CheckOut" timestamp="2021-01-18T23:21:16" hostname="localhost" time="15.442" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="The Products must be able to Added to the Cart and CheckOut" name="Check Cart Button Status" time="6.212" id="" specid="spec2" />
+  <testcase classname="The Products must be able to Added to the Cart and CheckOut" name="Check Items are displayed in the Checkout Conatiner and Checkout" time="9.224" id="" specid="spec3" />
+ </testsuite>
+ <testsuite name="Check the Functionality of of Link Button" timestamp="2021-01-18T23:21:31" hostname="localhost" time="31.294" errors="0" tests="1" skipped="0" disabled="0" failures="0">
+  <testcase classname="Check the Functionality of of Link Button" name="Should Get Random Products With Link Image" time="30.216" id="" specid="spec4" />
+ </testsuite>
+ <testsuite name="Checking Link Button Window along with Url" timestamp="2021-01-18T23:22:02" hostname="localhost" time="27.016" errors="0" tests="1" skipped="0" disabled="0" failures="2">
+  <testcase classname="Checking Link Button Window along with Url" name="Should Click View Button and Open a New tab" time="27.006" id="" specid="spec5">
+   <failure type="toBeFalsy" message="Expected true to be falsy."><![CDATA[Error: Failed expectation
+    at C:\later-test\__test__\linkinBio\tc02.spec.ts:42:45
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\later-test\__test__\linkinBio\tc02.spec.ts:5:58)
+    at process._tickCallback (internal/process/next_tick.js:68:7)]]>
+   </failure>
+   <failure type="toBeFalsy" message="Expected true to be falsy."><![CDATA[Error: Failed expectation
+    at C:\later-test\__test__\linkinBio\tc02.spec.ts:42:45
+    at Generator.next (<anonymous>)
+    at fulfilled (C:\later-test\__test__\linkinBio\tc02.spec.ts:5:58)
+    at process._tickCallback (internal/process/next_tick.js:68:7)]]>
+   </failure>
+  </testcase>
+ </testsuite>
+</testsuites>
