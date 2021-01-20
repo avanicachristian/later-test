@@ -5,7 +5,7 @@
 Implemented the node modules as package manager and scripted in Javascript/ Typescript language
 I have used Protractor/Jasmine and Mocha frameworks for writing and supporting the tests
 ```
-Configuration: Scripts can be executed in Headless mode if you uncomment line 12 in conf.js file
+Configuration: Scripts can be executed in Headless mode if uncommented line 12 in conf.js file
 ```
 Reports:
 I have used protractor-html-screenshot-reporter to show final results along with the screenshots
