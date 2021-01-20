@@ -44,3 +44,4 @@ Checking the Subtotal Price with Actual Price
 ###### Issues Found:
 ``````
 The Link Image Url's was incorrect as it was redirecting to wrong url for both the products
+The screenshots and Reports can be found inside Report folder as well as Issues Tab
