@@ -1,4 +1,4 @@
-# Later-test-Project
+# Financeit-test-Project
 
 ## Stack
 
@@ -23,39 +23,37 @@ webdriver-manager update or  node ./node_modules/protractor/bin/webdriver-manage
 Execute the following command: `npm {suiteName}`
 
 ```
-npm linkinBioFunctionality
-```
+npm myProfileTest 
 
-These suites contain both TC01 and TC02 under it as a result it will test both of them in succession
+```
+npm businessContactTest
+```
+These suites contain TC01 as MyProfileTest and TC02 as Updating BusinessContactTest
 
 
 ### Suites
 
 #### TestCase01
 
-This Test case covers the Functionality of Cart Button which covers:
-Random selection of products with Cart Image,
-Getting the title of Product name to ensure correct product is selected,
-Checking Card Button Status- Enabled or Disabled: 
-It should be disabled at first when the product is not selected for Add to Cart Button,
-Select the products and select any one listings from dropdowns menu,
-After adding product in Cart, the Add to Cart Button should be enabled,
-Checkout the Product
+This Test case covers the Functionality of MyProfilePage which covers:
+Login to the Application
+Go to Settings Menu and Click MyProfile Page,
+Click on edit Function,
+Clear the Position Title Field text if there is any text present: 
+Update or Add the Position Title field with given testData,
+Click Save,
+Verify the Position Title Text from the Summary Page,
+Log out from the application
 
 #### TestCase02: 
 
-This Test Case covers the Functionality of Link Button which covers:
-Random selection of products with Link Image,
-Check Link Button window along with URl
+This Test Case covers the Functionality of Editing Business Contact Page which covers:
+Login to the Application
+Go to Settings Menu and Click BusinessContact settings Page,
+Click on edit Function,
+Check and Verify if there is already an Image Present, if it is present Click on Remove Image,
+Insert new Business Logo financeit Image,
+Click Save,
+Log out from the application
 
-#### Future Test Cases: 
 
-Click on Reset Button
-If given a correct url address to check, then tests can be optimised further to check product's status,
-Adding/Subtracting the products from Shopping cart Card,
-Checking the Subtotal Price with Actual Price
-
-### Issues Found:
-
-The Link Image Url's was incorrect as it was redirecting to wrong url for both the products
-The Reports and Screenshots can be found under Reports Folder in the script as well as under Issues Tab
