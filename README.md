@@ -24,8 +24,6 @@ Execute the following command: `npm {suiteName}`
 
 ```
 npm myProfileTest 
-
-```
 npm businessContactTest
 ```
 These suites contain TC01 as MyProfileTest and TC02 as Updating BusinessContactTest
