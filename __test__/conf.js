@@ -1,5 +1,6 @@
 const dateTime = Date.now();
 var path = require("path");
+const suites = require('./suites');
 const downloadsPath = path.resolve(__dirname, "../__test__/downloads");
 
 exports.config = {
@@ -38,12 +39,7 @@ exports.config = {
         showColors: true,
     },
     noGlobals: false,
-    suites: {
-      linkinBioFunctionality: [
-            "./linkinBio/tc01.spec.ts",
-            "./linkinBio/tc02.spec.ts",
-      ],
-    },
+    suites:suites,
     onPrepare() {
         require("ts-node").register({
             project: "./tsconfig.json"
