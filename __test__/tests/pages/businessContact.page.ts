@@ -23,7 +23,7 @@ export class businessContactPage {
     return false;
   }
 
-  async insertBusinessImage(): Promise<void> {
+  async insertBusinessLogoImage(): Promise<void> {
     const checkImageIsPresent = await element(
       by.className("logoPreview")
     ).isDisplayed();
@@ -46,9 +46,5 @@ export class businessContactPage {
 
   async removeBusinessLogo(): Promise<void> {
     return element(Selectors.removeLogo).click();
-  }
-
-  async enterContactInfo(text): Promise<void> {
-    element(Selectors.firstContactField).sendKeys(text);
   }
 }

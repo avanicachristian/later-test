@@ -20,10 +20,10 @@ describe(`TC-02 - Navigating to Business Contact page via Settings menu, Upload 
     expect(isClicked).toBeTruthy();
   });
 
-  it(`should insert Financeit Business Logo`, async () => {
+  it(`should insert Financeit Business Logo Image`, async () => {
     await home.waitForTime(5);
     // await businessPage.removeBusinessLogo();
-    const fileUploaded = await businessPage.insertBusinessImage();
+    const fileUploaded = await businessPage.insertBusinessLogoImage();
     await home.waitForTime(5);
   });
 
